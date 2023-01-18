@@ -1,0 +1,42 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "RXJS",
+  "steps": [
+    {
+      "file": "package.json",
+      "description": "### La librairie rxjs\nrxjs est une librarie permettant de créer plus facilement des programmes asynchrones ou basé sur des évenements. Elle permet de gérer des séquences d'évenements de manière [fonctionnelle](https://www.youtube.com/watch?v=0qj949uJQ7w)",
+      "line": 15
+    },
+    {
+      "file": "observable.ts",
+      "description": "### Les observables\nLes observables sont similaires au promises c'est à dire qu'elle poussent (push system)les données de leur propre gré comme on le vera au prochain tour.",
+      "line": 3
+    },
+    {
+      "file": "push_pull.ts",
+      "description": "### Push vs Pull\n\nUn exemple de pull system sont les fonctions en js. Imaginons une fonction nommé hello, lorsque que j'appelle la fonction à la ligne 5, le console.log s'éxécute  et m'affiche mon string \"Hello\" dans la console.\n\nDonc j'ai tiré (pull) la données et je l'ai eu directement. ",
+      "line": 1
+    },
+    {
+      "file": "push_pull.ts",
+      "description": "### Les promises\nLes promises sont un type de push system, puisque c'est elles qui décident du transfère de données. Ici à la ligne 16 nous devons atttendre 1s (à cause du setTimout de la ligne 10) que la promise s'éxécute et nous renvoie l'info.\n\nDonc j'attend que la promise me pousse (Push) la donnée qui m'intéresse.",
+      "line": 8
+    },
+    {
+      "file": "push_pull.ts",
+      "description": "# Pour conclure \n|                  | Producteur | Consomateur |\n| ---------------- | ---------------- | ---------------- |\n|        Pull System         | Passif: produit la donnée quand on lui demande    | Actif: Décide de quand la donnée est besoin    |\n|        Push System         | Active: Produit la donnée quand il le décide    | Passif: Doit attendre de recevoir la données    |",
+      "line": 18
+    },
+    {
+      "file": "observable.ts",
+      "description": "### Fonction vs Observable\n\nUn observables peut retourner plusieurs valeurs différentes \n***Voir FooObservable*** \ntandis qu'une fonction ne pourra pas.***Voir la fonction foo***.\n\n",
+      "line": 23
+    },
+    {
+      "file": "observable.ts",
+      "description": "### Souscrire à un observable\nIci à la ligne 46 et 47 on peut voir 2 différentes souscription à l'observable. C'est pour bien montré chacune des souscriptions sont bien indépendantes l'une de l'autre montrant bien qu'un observable est différent des émetteurs d'évenements qui eux partages le même évenement aux souscripteurs.",
+      "line": 46
+    }
+  ],
+  "ref": "rxjs_observables"
+}
