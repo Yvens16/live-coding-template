@@ -45,3 +45,23 @@ const timedObservable = new Observable((subscriber) => {
 
 timedObservable.subscribe((data) => console.log(`${data} pour première subscriber`));
 timedObservable.subscribe((data) => console.log(`${data} pour second subscriber`));
+
+
+const completeBeforeAllValuesEvalutated = new Observable(function subscribe(subscriber) {
+  subscriber.next(1);
+  subscriber.next(2);
+  subscriber.next(3);
+  subscriber.complete();
+  subscriber.next(4); // N'est pas envoyé au subscriber car est déja complété à la ligne 54
+});
+
+
+const errorObservable = new Observable((subscriber) => {  
+  try {
+    subscriber.next(1);
+    subscriber.next(2);
+    subscriber.complete();
+  } catch(err) {
+    subscriber.error('Error!');
+  }
+});

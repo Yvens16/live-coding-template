@@ -17,3 +17,40 @@ observable.subscribe({
     complete() { console.log('done'); },
 });
 console.log("Just after subscribe");
+function foo() {
+    console.log('Hello');
+    return 42;
+    return 100; // ceci be s'executera pas 
+}
+foo(); // Affiche Hello puis 42 et c'est tout
+const fooObservable = new rxjs_1.Observable((subscriber) => {
+    console.log('Hello from observable');
+    subscriber.next(42);
+    subscriber.next(100);
+});
+fooObservable.subscribe((data) => console.log(data)); // Affiche Hello from observable puis 42 puis 100
+const timedObservable = new rxjs_1.Observable((subscriber) => {
+    let i = 0;
+    setInterval(() => {
+        subscriber.next("Bonjour");
+    }, 1000);
+});
+timedObservable.subscribe((data) => console.log(`${data} pour première subscriber`));
+timedObservable.subscribe((data) => console.log(`${data} pour second subscriber`));
+const completeBeforeAllValuesEvalutated = new rxjs_1.Observable(function subscribe(subscriber) {
+    subscriber.next(1);
+    subscriber.next(2);
+    subscriber.next(3);
+    subscriber.complete();
+    subscriber.next(4); // N'est pas envoyé au subscriber car est déja complété à la ligne 54
+});
+const errorObservable = new rxjs_1.Observable((subscriber) => {
+    try {
+        subscriber.next(1);
+        subscriber.next(2);
+        subscriber.complete();
+    }
+    catch (err) {
+        subscriber.error('Error!');
+    }
+});

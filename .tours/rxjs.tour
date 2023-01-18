@@ -36,6 +36,41 @@
       "file": "observable.ts",
       "description": "### Souscrire à un observable\nIci à la ligne 46 et 47 on peut voir 2 différentes souscription à l'observable. C'est pour bien montré chacune des souscriptions sont bien indépendantes l'une de l'autre montrant bien qu'un observable est différent des émetteurs d'évenements qui eux partages le même évenement aux souscripteurs.",
       "line": 46
+    },
+    {
+      "file": "observable.ts",
+      "description": "Dans un observable, on peut délivré de la donnée à l'infini sauf si une erreur ou une notification de completion est délivré dans ce cas la. Plus aucune donné ne sera délivré.\n\nIci à la ligne 54 nous terminons l'observable donc toutes les données qui pourraient être envoyé après cette ligne ne le seront pas.",
+      "line": 56
+    },
+    {
+      "file": "observable.ts",
+      "description": "De même ici,si il se passe un problème dans votre logique et qu'une erreur apparaît. Le subscriber.error de la ligne 65 sera déclencher et arrêtre l'exécution directement.",
+      "line": 67
+    },
+    {
+      "file": "error_observable.ts",
+      "description": "Voici un exemple ici d'éxécution arrêté par un catch.\nIl vous suffit de taper `tsc` à la racine du projet et puis `node dist/error_observable.js`",
+      "line": 16
+    },
+    {
+      "file": "observer.ts",
+      "description": "### Qu'est ce qu'un observer \nUn observer est consommateur de valeur, c'est un ensemble de callback, une pour chaque type de notification: *next, error ou complete*\nGrâce à ces 3 callbacks vous pourrez indiquer une action à effectuer pour chaque cas.",
+      "line": 17
+    },
+    {
+      "file": "unsubscribe.ts",
+      "description": "### Souscription\nUne souscription représente l'éxecution d'un observable, il est possible de faire 2 choses avec ces souscriptions.\n*Voir prochains steps --->*",
+      "line": 7
+    },
+    {
+      "file": "unsubscribe.ts",
+      "description": "### Lié 2 souscription\n\nIl est possible de lier 2 souscription pour pour ensuite pouvoir les annuler en même temps \n*Voir prochain --->*",
+      "line": 9
+    },
+    {
+      "file": "unsubscribe.ts",
+      "description": "### Annuler des souscriptions\n\nIci Après avoir lier les 2 souscriptions, nous les annulons d'un coup à la ligne 13 avec la fonction unsubscribe.",
+      "line": 14
     }
   ],
   "ref": "rxjs_observables"
