@@ -1,0 +1,82 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "typescript classes",
+  "steps": [
+    {
+      "file": "inheritance.ts",
+      "description": "### L'héritage\n\nGrâce au principe de l'héritage, nous pouvons créer des nouvelles classes possédant les propriétés de classes déja existantes.\n\nComme vu ici avec la classe Adult qui hérite de la classe Person.\n\nDonc la class Adult possèdes les propriétées firstName et age qui proviennent de la classe Person",
+      "line": 8
+    },
+    {
+      "file": "inheritance.ts",
+      "description": "### L'héritage suite\n Ici nous créons donc un objet depuis la classe ***Adult***, et nous pouvont y définir les propriétés de la class ***Person*** en plus de celles de la classe ***Adult***",
+      "line": 13
+    },
+    {
+      "file": "modifiers.ts",
+      "description": "### Modifiers\n#### ***(public, protected, private)***\nLes modifiers ***(in English)***,permettent de controller la portée des propriétés et méthodes d'une classes.",
+      "line": 1
+    },
+    {
+      "file": "modifiers.ts",
+      "description": "### Public \n\n***public:*** Les éléments de la classe peuvent être accéder depuis l'extérieur de la classe et au travers des classes qui héritent de la classe principale (Ces descendant).\n\nLa classe ***Dog*** est un descendant de la classe ***Animal***.",
+      "line": 13
+    },
+    {
+      "file": "modifiers.ts",
+      "description": "### Protected\n\n***protected:*** Les éléments avec le modifier protected ne sont accessibles que depuis une classe et ses descendants.\n\nIci le ***protectedInformation*** n'est disponible que dans la classe ***Animal*** et la classe *** Dog***\n\nIl m'est impossible d'y avoir accès depuis le monde extérieur\n\n```ts\nconsole.log(dog.protectedInformation);\n```\nSi tu insère le bout de code ci-dessus tu verra qu'il t'est impossible de l'utiliser car une erreur apparaît.",
+      "line": 21
+    },
+    {
+      "file": "modifiers.ts",
+      "description": "#### private \n\n***private:*** Un membre d'une classe possédant le modifier private ne pourra être utiliser qu'à l'intérieur de cette classe. Voir la propriété age de la classe ***Woman*** *** voir suite ***\n\n",
+      "line": 41,
+      "selection": {
+        "start": {
+          "line": 40,
+          "character": 27
+        },
+        "end": {
+          "line": 42,
+          "character": 1
+        }
+      }
+    },
+    {
+      "file": "modifiers.ts",
+      "description": "### Suite 1/3\n\nLe membre private ne pourra pas être utiliser à l'intérieur d'un descendant \n*** voir suite ***",
+      "line": 36,
+      "selection": {
+        "start": {
+          "line": 40,
+          "character": 27
+        },
+        "end": {
+          "line": 41,
+          "character": 1
+        }
+      }
+    },
+    {
+      "file": "modifiers.ts",
+      "description": "### Suite 2/3\n\nNi ne pourra être utiliser à l'extérieur tout court tout comme le protected.",
+      "line": 41
+    },
+    {
+      "file": "modifiers.ts",
+      "description": "### Suite 3/3\n\nPar contre il pourra être renvoyé grâce à une méthode de la classe dans laquel le membre private est déclaré.",
+      "line": 30
+    },
+    {
+      "file": "SimplerClass.ts",
+      "description": "### Déclaration normal d'une classe\n\nIci on utilise le constructor pour initialiser les propriétés de notre de classe qu'elles soient private, public ou protected. Nous devons les déclarer comme à la ligne 2 et 3 puis les intialiser à la ligne 5 dans le constructor. \n\nMais il existe une manière plus concise de faire la même chose",
+      "line": 18
+    },
+    {
+      "file": "SimplerClass.ts",
+      "description": "### Plus conscis\n\nEn utilisant les ***modifiers***, il est possible de déclarer et d'initialiser les propriétés d'une classe sur la même ligne. Comme à la ligne 28 de la classe SimplerClass. Plus simple mais l'effet est le même. ",
+      "line": 40
+    }
+  ],
+  "ref": "typescript_classes"
+}
