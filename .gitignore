@@ -1,1 +1,44 @@
 node_modules/
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+angular_live_coding/dist
+angular_live_coding/tmp
+angular_live_coding/out-tsc
+angular_live_coding/bazel-out
+
+# Node
+angular_live_coding/node_modules
+angular_live_coding/angular_live_coding/npm-debug.log
+angular_live_coding/angular_live_coding/yarn-error.log
+
+# IDEs and editors
+angular_live_coding/angular_live_coding/.idea/
+angular_live_coding/angular_live_coding/.project
+angular_live_coding/angular_live_coding/.classpath
+angular_live_coding/angular_live_coding/.c9/
+angular_live_coding/angular_live_coding/*.launch
+angular_live_coding/angular_live_coding/.settings/
+angular_live_coding/angular_live_coding/*.sublime-workspace
+
+# Visual Studio Code
+angular_live_coding/.vscode/*
+angular_live_coding/!.vscode/settings.json
+angular_live_coding/!.vscode/tasks.json
+angular_live_coding/!.vscode/launch.json
+angular_live_coding/!.vscode/extensions.json
+angular_live_coding/.history/*
+
+# Miscellaneous
+angular_live_coding/.angular/cache
+angular_live_coding/.sass-cache/
+angular_live_coding/connect.lock
+angular_live_coding/coverage
+angular_live_coding/libpeerconnection.log
+angular_live_coding/testem.log
+angular_live_coding/typings
+
+# System files
+angular_live_coding/.DS_Store
+angular_live_coding/Thumbs.db

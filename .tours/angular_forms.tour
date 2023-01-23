@@ -1,0 +1,47 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "angular_forms",
+  "steps": [
+    {
+      "file": "readme.md",
+      "description": "### Intro\nÀ lancer avant de continuer dans le projet\n>> cd angular_live_coding/  \n\n>> npm install  ",
+      "line": 8
+    },
+    {
+      "file": "readme.md",
+      "description": "# Les formulaires\n\nNous allons voir 2 types de formulaires, les template-driven pour les formulaires plutôt simple.\n\nEt les Reactive-forms pour les formulaires plus complexes.",
+      "line": 1
+    },
+    {
+      "file": "angular_live_coding/src/app/app.module.ts",
+      "description": "# Importer et utiliser le module forms Module\n\nOn va tout d'abords commencer par importer et ajouter le module FormsModule dans notre fichier app.module.ts",
+      "line": 16
+    },
+    {
+      "file": "angular_live_coding/src/app/app.component.html",
+      "description": "# Template-driven forms\n\nAvec cette API, tu neux peux qu'utiliser des directives dans le template html d'un composant.\n\nLa directive NgForm represent le formulaire entier. Si tu ajoute le bout de code ci-dessous tu pourra afficher le contenue de ton formulaire, attentionà n'utiliser que pendant la phase de dev.\n```html\n<span>{{form.value | json}}</span>\n```\n\nLa variable de template form représente l'instance de NgForm et nous permet donc d'accéder à ses valeurs (Les valeurs du formulaires).",
+      "line": 4
+    },
+    {
+      "file": "angular_live_coding/src/app/app.component.html",
+      "description": "### NgModel directives\n\nCette directive représente la valeur de l'input ou elle est utiliser dans le formulaire.\n```html\n<input type=\"text\" name=\"username\" ngModel>\n```\n\nDonc ici dans l'objet form, cela nous crée un champ *username* qui va contenir la valeur de ce qui et sera écrit dans l'input.\n\nNous devons donc ajouter un *ngModel* sur chaque input de notre formulaire.",
+      "line": 4
+    },
+    {
+      "file": "angular_live_coding/src/app/app.component.html",
+      "description": "### NgGroup directive\nLa directive ngGroup crée une propriété passwords l'objet ***form** qui contient les champs ***password*** et ***confirm_password***\n\n```html\n  <div ngModelGroup=\"passwords\">\n     <input type=\"text\" name=\"password\" ngModel>\n    <input type=\"text\" name=\"confirmation_password\" ngModel>\n  </div>\n```\n\nDonc l'objet form ressemblerait à l'objet ci-dessous:\n\nconst form = {  \n\n  username: \"\",  \n  \n  passwords: {  \n    \n    password: \"\",  \n    \n    confirm_password: \"\"  \n    \n  }\n}",
+      "line": 8
+    },
+    {
+      "file": "angular_live_coding/src/app/app.component.html",
+      "description": "### ngSubmit\n\nLe ngSubmit est un émetteur d'évenement qui va déclancher notre fonction *onSubmit* (que l'on déclare dans notre component.ts).\nEt tout cela seulement au moment du click sur notre boutton de type \"submit\"\n```html\n<button type=\"submit\">Envoyer</button>\n```",
+      "line": 8
+    },
+    {
+      "file": "angular_live_coding/src/app/app.component.ts",
+      "description": "### onSubmit\n\nVoici notre fonction onSubmit qui va se déclencher lors du clique sur le boutton envoyer dans notre html.\n\nIl ne reste plus qu'à tester sur notre application dans le navigateur.",
+      "line": 21
+    }
+  ],
+  "ref": "angular_formulaires"
+}
