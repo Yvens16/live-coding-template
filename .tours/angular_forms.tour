@@ -41,6 +41,51 @@
       "file": "angular_live_coding/src/app/app.component.ts",
       "description": "### onSubmit\n\nVoici notre fonction onSubmit qui va se déclencher lors du clique sur le boutton envoyer dans notre html.\n\nIl ne reste plus qu'à tester sur notre application dans le navigateur.",
       "line": 21
+    },
+    {
+      "file": "angular_live_coding/src/app/app.module.ts",
+      "description": "### Reactive-forms\n\nJe commence par importer *** ReactiveFormsModule *** à la ligne 4 et je l'ajoute au tableaux *** d'imports *** de la ligne 13. Ceci étant fais, je peux maintenant utiliser l'API reactive-forms.",
+      "line": 21,
+      "selection": {
+        "start": {
+          "line": 17,
+          "character": 5
+        },
+        "end": {
+          "line": 17,
+          "character": 24
+        }
+      }
+    },
+    {
+      "file": "angular_live_coding/src/app/app.component.ts",
+      "description": "### FormControl\n\n*** myFormModel *** est la structure de données qui contient les données du formulaire.\n* Un *** FormControl correspond au contenu d'un input.\n\n\n```js\n      username: new FormControl(''),\n```",
+      "line": 24
+    },
+    {
+      "file": "angular_live_coding/src/app/app.component.ts",
+      "description": "### FormGroup\n\n* Un *** FormGroup *** représente un groupe d'inputs, de plus si un des inputs n'est pas valide, la totalité des inputs sera invalidé.\n\n```js\n passwords: new FormGroup({\n        password: new FormControl(''),\n        confirm_password: new FormControl('')\n      })\n```",
+      "line": 25
+    },
+    {
+      "file": "angular_live_coding/src/app/app.component.ts",
+      "description": "### FormControl validator\nNous pouvons aussi ajouter des validator à chaque FormControl à fin d'émettre des conditions de validité de l'input.\n\n```js\nlet city = new FormControl('New York',\n                 [Validators.required,\n                  Validators.minLength(2)]);\n```\n\nIci, on précise que cette input doit être obligatoirement complété et doit avoir au moins 2 charactères pour que le formulaire soit valide. ",
+      "line": 21
+    },
+    {
+      "file": "angular_live_coding/src/app/app.component.html",
+      "description": "### The HTML markup\n\nCréeons maintenant notre formulaire dans l'html.\n\nNous devons donc utiliser la directive ***formGroup*** pour lié notre formulaire à notre model dans le typescript.\nOn utilise aussi le transmétteur d'évenement ***ngSubmit*** pour envoyer nos données sur le serveur au clique sur le boutton *Envoyer*",
+      "line": 12
+    },
+    {
+      "file": "angular_live_coding/src/app/app.component.html",
+      "description": "### Inputs\n\nComme pour le template-driven form ajoutons notre markup html correspondant à nos inputs.\n```html\n<input type=\"text\" formControlName=\"username\">\n<div formGroupName=\"passwords\">\n <input type=\"text\" formControlName=\"password\">\n <input type=\"text\" formControlName=\"confirm_password\">\n</div>\n```",
+      "line": 17
+    },
+    {
+      "file": "angular_live_coding/src/app/app.component.ts",
+      "description": "### onReactiveSubmit\n\nMaintenant il va falloir exécuter notre fonction à l'envoi du formulaire.\n\n```js\nonReactiveSubmit() {\n  console.log(this.myFormModel.value);\n}\n```\n\nIci la fonction de submit n'a pas besoin d'argument car on utilise la propriété ***myFormModel*** pour accéder aux valeurs du formulaire.",
+      "line": 36
     }
   ],
   "ref": "angular_formulaires"

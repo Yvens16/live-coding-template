@@ -6,4 +6,13 @@
 
   </form>
 </div>
+
+<div class="reactive-form">
+  <form [formGroup]="myFormModel" (ngSubmit)="onReactiveSubmit()">
+
+<input type="text" formControlName="username">
+
+<button type="submit">Submit</button>
+  </form>
+</div>
 <router-outlet></router-outlet>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 interface IformData {
   username: string,
@@ -16,9 +17,20 @@ interface IformData {
 export class AppComponent {
   title = 'angular_live_coding';
 
+  myFormModel: FormGroup = {};
+
+  constructor() {
+    this.myFormModel = new FormGroup({
 
 
-  onSubmit(formData:IformData):void {
+
+    });
+  }
+
+  onSubmit(formData: IformData): void {
     console.log(formData);
   }
+
+  
 }
+
